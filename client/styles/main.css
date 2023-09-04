@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Roboto&display=swap');
+
+body {
+  background-color: rgb(212, 196, 175);
+  margin-bottom: 10rem;
+}
+
+h1 {
+  font-family: 'montserrat', sans-serif;
+  text-align: center;
+  font-size: 80px;
+}

@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <!-- This link is changed on my actual github html file as otherwise it doesn't want to properly load my css >_<-->
+    <link href="/client/styles/main.css" rel="stylesheet" type="text/css" />
+    <title>Plant Time!</title>
+    <!-- this is what sits on the tab bit at the top of the screen-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Template • TodoMVC</title>
-    <link rel="stylesheet" href="./client/styles/index.scss" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+    </style>
   </head>
   <body>
-    <section id="app" class="todoapp"></section>
+    <section id="app" class="plantapp"></section>
 
-    <footer class="info">
-      <p>Double-click to edit a todo</p>
-      <p>
-        Template by
-        <a href="http://sindresorhus.com" target="_blank">Sindre Sorhus</a>
-      </p>
-
-      <!-- Remove ↓ -->
-      <p class="design-link">
-        <a href="/designs/index.html" target="_blank"
-          >Click here to see the designs</a
-        >
-      </p>
-      <p class="design-link">↑ Remove this at some point</p>
-      <!-- Remove ↑ -->
     </footer>
     <script src="./client/index.tsx" type="module"></script>
   </body>
