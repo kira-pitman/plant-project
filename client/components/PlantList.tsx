@@ -11,7 +11,7 @@ export default function PlantList() {
     data: plantList,
     isError,
     isLoading,
-  } = useQuery(['plant'], fetchAllPlants)
+  } = useQuery(['plants'], fetchAllPlants)
   console.log(plantList)
 
   if (isError) {
@@ -26,8 +26,8 @@ export default function PlantList() {
     <>
       <h2>Ya bois</h2>
       <ul>
-        {plantList.map((p: Plant) => {
-          <li key={p.id}>{p.name}</li>
+        {plantList.map((p: Plant, index: number) => {
+        return  <li key={index}>{p.name}</li> //keep stuffing up getting into an object key in an array
         })}
       </ul>
     </>
