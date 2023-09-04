@@ -1,7 +1,7 @@
 import { Plant } from '../../models/plants.ts'
 import db from './connection.ts'
 
-export async function getAllPlants(): Promise<Plant[]>{
-  const allPlants = await db('plants').select('')
-  return allPlants
+export async function getAllPlants(): Promise<Plant[]> {
+  return await db('plants').select('*')
+ 
 }

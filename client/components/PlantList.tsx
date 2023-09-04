@@ -1,5 +1,4 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { Link } from 'react-router-dom'
 import { fetchAllPlants } from '../apis/apiClient'
 import { Plant } from '../../models/plants'
 
@@ -9,26 +8,28 @@ import { Plant } from '../../models/plants'
 
 export default function PlantList() {
   const {
-    data: plants,
+    data: plantList,
     isError,
     isLoading,
-  } = useQuery(['plants'], fetchAllPlants)
+  } = useQuery(['plant'], fetchAllPlants)
+  console.log(plantList)
 
   if (isError) {
-    return <p>Whoops! Time to get some plants, as yours are don't live here!</p>
+    return <p>Whoops! Time to get some plants, as yours do not live here!</p>
   }
 
-  if (!plants || isLoading) {
+  if (!plantList || isLoading) {
     return <p>Loading plants..</p>
   }
 
   return (
     <>
-      <h2>All Items Available</h2>
-
-      {plants.map((plant: Plant) => (
-        <PlantListItem key={plant.id} id={plant.id} name={plant.name} />
-      ))}
+      <h2>Ya bois</h2>
+      <ul>
+        {plantList.map((p: Plant) => {
+          <li key={p.id}>{p.name}</li>
+        })}
+      </ul>
     </>
   )
 }

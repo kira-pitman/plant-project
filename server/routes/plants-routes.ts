@@ -1,5 +1,5 @@
 import express from 'express'
-import * as db from '../db/plants'
+import * as db from '../db/plants.ts'
 // import { getPlantById } from '../db/plants.ts'
 
 const router = express.Router()
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     res
       .status(500)
       .send(
-        'whoops! time to get some plants, as your&apos:s are don&apos:t live here!'
+        'whoops! time to get some plants, as your&apos:s don&apos:t live here!'
       )
   }
 })

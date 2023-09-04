@@ -1,5 +1,6 @@
 // import AddTodo from './AddTodo.tsx'
-import PlantList from './PlantList.tsx'
+import { Outlet } from 'react-router-dom'
+import PlantList from './PlantList'
 
 function App() {
   return (
