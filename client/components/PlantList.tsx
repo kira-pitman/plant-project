@@ -15,12 +15,7 @@ export default function PlantList() {
   } = useQuery(['plants'], fetchAllPlants)
 
   if (isError) {
-    return (
-      <p>
-        whoops! time to get some plants, as your&apos:s are don&apos:t live
-        here!
-      </p>
-    )
+    return <p>Whoops! Time to get some plants, as yours are don't live here!</p>
   }
 
   if (!plants || isLoading) {
@@ -30,17 +25,10 @@ export default function PlantList() {
   return (
     <>
       <h2>All Items Available</h2>
-      <ul>
-        {plants.map((plant: Plant) => (
-          <li key={plant.id}>
-            <img className="plant-img" src={plant.image} alt="plants" />
-            {plant.name}
-            <Link to={`${plant.id}/${plant.name}'}`}></Link>
 
-            <button id="would-not-like">No Thank You</button>
-          </li>
-        ))}
-      </ul>
+      {plants.map((plant: Plant) => (
+        <PlantListItem key={plant.id} id={plant.id} name={plant.name} />
+      ))}
     </>
   )
 }
