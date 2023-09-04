@@ -21,6 +21,17 @@ router.get('/', async (req, res) => {
   }
 })
 
+router.get('/:id/', (req, res) => {
+  console.log('server')
+  try{
+    const id = Number(req.params.id)
+    db.getPlantById(id).then((plants) => {
+      res.json(plants)
+    })}
+    catch(error)
+ 
+})
+
 // POST /api/vi/plants
 // use req.body and pass to db addPlant query
 // use

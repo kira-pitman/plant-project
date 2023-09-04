@@ -7,7 +7,7 @@ function App() {
     <>
       <header className="header">
         <h1>It&apos;s ya bois</h1>
-        <PlantList />
+        <Outlet />
       </header>
       <section className="main"></section>
       <footer className="footer"></footer>

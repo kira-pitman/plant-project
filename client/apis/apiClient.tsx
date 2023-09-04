@@ -8,3 +8,9 @@ export async function fetchAllPlants() {
 
   return response.body
 }
+
+export async function fetchPlantById(id: number) {
+  console.log('wahoo we fetching a plant by Id using apiclient')
+  const response = await request.get('/api/v1/plants/${id}')
+  return response.body
+}
