@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     res
       .status(500)
       .send(
-        'whoops! time to get some plants, as your&apos:s are no longer here!'
+        'whoops! time to get some plants, as your&apos:s are don&apos:t live here!'
       )
   }
 })
