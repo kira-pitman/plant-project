@@ -1,7 +1,7 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import plantsRoute from './routes/plants-routes.ts'
+import plantsRoute from './routes/plants-routes'
 
 const server = express()
 
