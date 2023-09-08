@@ -1,7 +1,3 @@
-//  export interface ______ {
-
-// }
-
 export interface Plant {
   id: number
   name: string
@@ -9,4 +5,8 @@ export interface Plant {
   location: string
   facts: string
   image: string
+}
+
+export interface InitialPlant {
+  
 }

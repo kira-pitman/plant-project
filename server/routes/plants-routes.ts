@@ -21,15 +21,11 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/:id/', (req, res) => {
-  console.log('server')
-  try{
-    const id = Number(req.params.id)
-    db.getPlantById(id).then((plants) => {
-      res.json(plants)
-    })}
-    catch(error)
- 
+router.get('/:id', async (req, res) => {
+  console.log('yahoo! You made it to a plant page!')
+  const id = Number(req.params.id)
+  const onePlant = await db.getPlantById(id)
+  res.json(onePlant)
 })
 
 // POST /api/vi/plants
