@@ -1,12 +1,13 @@
 // import AddTodo from './AddTodo.tsx'
 import { Outlet } from 'react-router-dom'
 import PlantList from './PlantList'
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
     <>
       <header className="header">
-        <h1>It&apos;s ya bois</h1>
+      <Link to="/"><h1>It&apos;s ya bois</h1></Link>
         <Outlet />
       </header>
       <section className="main"></section>
