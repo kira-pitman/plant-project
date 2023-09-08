@@ -24,21 +24,16 @@ export default function PlantInfo() {
     <>
       <div>
         {/* want to return all plant info: name, height, location, fact, image */}
-        <h1>{plant?.name}</h1>
-        <img src={plant?.image} alt={plant?.name} />
+        <h2>Plant name</h2>
+        <p>{plant?.name}</p>
+        <img src={plant?.image} alt={`${plant?.name}`}/>
         <h2>Height</h2>
-        {plant?.map((p: Plant, index: number) => {
-          return <li key={index}>{p.height}</li>
-        })}
+         <p> {plant?.height}</p>
+         <h2>Location</h2>
+         <p> {plant?.location}</p>
+         <h2>Facts</h2>
+         <p> {plant?.facts}</p>
 
-        <h2>Location</h2>
-        {plant?.map((p: Plant, index: number) => {
-          return <li key={index}>{p.location}</li>
-        })}
-        <h2>Fact</h2>
-        {plant?.map((p: Plant, index: number) => {
-          return <li key={index}>{p.facts}</li>
-        })}
       </div>
     </>
   )
