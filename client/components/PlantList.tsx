@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { fetchAllPlants } from '../apis/apiClient'
 import { Plant } from '../../models/plants'
+import { Link } from 'react-router-dom'
 
 //useQuery
 //also want to return plant list by mapping over everything perhaps?
@@ -27,7 +28,11 @@ export default function PlantList() {
       <h2>Ya bois</h2>
       <ul>
         {plantList.map((p: Plant, index: number) => {
-        return  <li key={index}>{p.name}</li> //keep stuffing up getting into an object key in an array
+          return (
+            <li key={index}>
+              <Link to={`/${p.id}`}> {p.name}</Link>
+            </li>
+          ) //keep stuffing up getting into an object key in an array
         })}
       </ul>
     </>

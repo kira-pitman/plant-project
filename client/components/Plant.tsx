@@ -10,7 +10,6 @@ export default function PlantInfo() {
     isLoading,
     error,
   } = useQuery(['plant'], () => fetchPlantById(id))
-  console.log(plant)
 
   if (isLoading) {
     return <p>Still loading ya boi</p>
@@ -26,14 +25,13 @@ export default function PlantInfo() {
         {/* want to return all plant info: name, height, location, fact, image */}
         <h2>Plant name</h2>
         <p>{plant?.name}</p>
-        <img src={plant?.image} alt={`${plant?.name}`}/>
+        <img src={plant?.image} alt={`${plant?.name}`} />
         <h2>Height</h2>
-         <p> {plant?.height}</p>
-         <h2>Location</h2>
-         <p> {plant?.location}</p>
-         <h2>Facts</h2>
-         <p> {plant?.facts}</p>
-
+        <p> {plant?.height}</p>
+        <h2>Location</h2>
+        <p> {plant?.location}</p>
+        <h2>Facts</h2>
+        <p> {plant?.facts}</p>
       </div>
     </>
   )
