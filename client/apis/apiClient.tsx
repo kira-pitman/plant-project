@@ -1,4 +1,5 @@
 import request from 'superagent'
+import { Plant, newPlant } from '../../models/plants'
 
 export async function fetchAllPlants() {
   console.log('wahoo we made it to the api')
@@ -17,4 +18,24 @@ export async function fetchPlantById(id: number) {
 
   // const response = await request.get(`/api/v1/plants/${id}`)
   // return response.body
+}
+
+interface AddPlant {
+  name: Plant['name']
+  height: Plant['height']
+  location: Plant['location']
+  facts: Plant['facts']
+  image: Plant['image']
+}
+
+export async function addPlant({
+  name,
+  height,
+  location,
+  facts,
+  image,
+}: AddPlant): Promise<void> {
+  await request
+    .post('/api/v1/plants')
+    .send({ name, height, location, facts, image })
 }
