@@ -8,3 +8,7 @@ export async function getAllPlants(): Promise<Plant[]> {
 export async function getPlantById(id: number){
   return await db('plants').where('id', id).select().first()
 }
+
+export async function deletePlant(id: number) {
+  return await db('plants').where({id}).delete()
+}

@@ -28,6 +28,12 @@ router.get('/:id', async (req, res) => {
   res.json(onePlant)
 })
 
+router.delete('/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  await db.deletePlant(id)
+  res.sendStatus(200) 
+})
+
 // POST /api/vi/plants
 // use req.body and pass to db addPlant query
 // use

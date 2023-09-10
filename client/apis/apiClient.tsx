@@ -39,3 +39,11 @@ export async function addPlant({
     .post('/api/v1/plants')
     .send({ name, height, location, facts, image })
 }
+
+interface DeletePlant {
+  id: Plant['id']
+}
+
+export async function deletePlant({id}: DeletePlant): Promise<void>{
+await request.delete(`/api/v1/plants/${id}`)
+}
