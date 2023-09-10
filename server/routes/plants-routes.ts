@@ -28,6 +28,12 @@ router.get('/:id', async (req, res) => {
   res.json(onePlant)
 })
 
+router.post('/', async (req, res) => {
+  const plant = req.body
+  const newPlant = await db.addPlant(plant)
+  res.status(200).json({ newPlant })
+})
+
 router.delete('/:id', async (req, res) => {
   const id = Number(req.params.id)
   await db.deletePlant(id)
