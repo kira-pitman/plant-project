@@ -14,5 +14,5 @@ export async function deletePlant(id: number) {
 }
 
 export async function addPlant(plant: newPlant) {
-  return db('plants').insert({plant}).returning(['id', 'name', 'height', 'location', 'facts', 'image'])
+  return db('plants').insert(plant).returning(['id', 'name', 'height', 'location', 'facts', 'image'])
 }

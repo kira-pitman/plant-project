@@ -20,21 +20,13 @@ export async function fetchPlantById(id: number) {
   // return response.body
 }
 
-interface AddPlant {
-  name: Plant['name']
-  height: Plant['height']
-  location: Plant['location']
-  facts: Plant['facts']
-  image: Plant['image']
-}
-
 export async function addPlant({
   name,
   height,
   location,
   facts,
   image,
-}: AddPlant): Promise<void> {
+}: newPlant): Promise<void> {
   await request
     .post('/api/v1/plants')
     .send({ name, height, location, facts, image })
