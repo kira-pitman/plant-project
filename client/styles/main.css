@@ -37,6 +37,11 @@ li {
   font-weight: bold;
 }
 
+a:link {
+  color: #2c2a2a;
+  text-decoration: none;
+}
+
 a:visited {
   color: #2c2a2a;
   text-decoration: none;
