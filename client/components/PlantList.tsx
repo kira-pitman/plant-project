@@ -42,7 +42,7 @@ export default function PlantList() {
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {name, value} = e.currentTarget
+    const { name, value } = e.currentTarget
     setFormValues((oldValues) => {
       return { ...oldValues, [name]: value }
     })
@@ -67,6 +67,7 @@ export default function PlantList() {
   return (
     <>
       <h2>Ya bois</h2>
+      <div className='plantList'>
       <ul>
         {plantList.map((p: Plant, index: number) => {
           return (
@@ -79,37 +80,43 @@ export default function PlantList() {
           )
         })}
       </ul>
+      </div>
 
       <form onSubmit={handleAddClick} aria-label="Add Plant Form">
         <input
           type="text"
           name="name"
+          aria-label="name"
           value={formValues.name}
-          onChange= {handleChange}
+          onChange={handleChange}
         />
         <input
           type="text"
           name="height"
+          aria-label="height"
           value={formValues.height}
-          onChange= {handleChange}
+          onChange={handleChange}
         />
         <input
           type="text"
           name="location"
+          aria-label="location"
           value={formValues.location}
-          onChange= {handleChange}
+          onChange={handleChange}
         />
         <input
           type="text"
           name="facts"
+          aria-label="facts"
           value={formValues.facts}
-          onChange= {handleChange}
+          onChange={handleChange}
         />
         <input
           type="text"
           name="image"
+          aria-label="image"
           value={formValues.image}
-          onChange= {handleChange}
+          onChange={handleChange}
         />
         <button type="submit" aria-label="save">
           Add

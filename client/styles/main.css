@@ -3,10 +3,30 @@
 body {
   background-color: rgb(212, 196, 175);
   margin-bottom: 10rem;
+  
 }
 
 h1 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 80px;
+}
+
+h2 {
+  font-family: 'montserrat', sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+ul {
+  font-family: 'montserrat', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: #2c2a2a;
+  text-decoration: none;
+}
+
+form {
+  font-family: 'montserrat', sans-serif;
+  text-align: center;
 }
