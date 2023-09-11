@@ -3,12 +3,6 @@
 //  * @returns { Promise<void> }
 //  */
 
-//id
-//name
-//height
-//location
-//facts
-//image
 export async function seed(knex) {
   await knex('plants').insert([
     {

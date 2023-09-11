@@ -18,7 +18,7 @@ export default function PlantList() {
     isError,
     isLoading,
   } = useQuery(['plants'], fetchAllPlants)
-  console.log(plantList)
+  
 
   const [formValues, setFormValues] = useState(intialFormState)
   const queryClient = useQueryClient()
@@ -45,7 +45,7 @@ export default function PlantList() {
     setFormValues((oldValues) => {
       return { ...oldValues, [name]: value }
     })
-    console.log(name, value)
+
   }
 
   const handleAddClick = (e: React.FormEvent<HTMLFormElement>) => {

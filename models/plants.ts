@@ -1,5 +1,4 @@
-export interface Plant {
-  id: number
+export interface newPlant {
   name: string
   height: string
   location: string
@@ -7,11 +6,6 @@ export interface Plant {
   image: string
 }
 
-export interface newPlant {
-  name: string
-  height: string
-  location: string
-  facts: string
-  image: string
-  
+export interface Plant extends newPlant {
+  id: number
 }
