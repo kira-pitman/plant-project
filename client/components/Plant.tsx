@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchPlantById } from '../apis/apiClient'
 import { useParams } from 'react-router-dom'
-import { Plant } from '../../models/plants'
 
 export default function PlantInfo() {
   const id = Number(useParams().id)

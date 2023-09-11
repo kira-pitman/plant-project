@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { addPlant, fetchAllPlants, deletePlant } from '../apis/apiClient'
-import { Plant, newPlant } from '../../models/plants'
+import { Plant } from '../../models/plants'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -20,7 +20,6 @@ export default function PlantList() {
   } = useQuery(['plants'], fetchAllPlants)
   console.log(plantList)
 
-  // I know there should be a useState but I can't think of what it is >_<
   const [formValues, setFormValues] = useState(intialFormState)
   const queryClient = useQueryClient()
 
@@ -53,9 +52,7 @@ export default function PlantList() {
     e.preventDefault()
     addPlantMutation.mutate(formValues)
   }
-  // DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement
-  // React.FormEventHandler<HTMLFormElement>, name: string, height: string, location: string, facts: string, image: string
-
+ 
   if (isError) {
     return <p>Whoops! Time to get some plants, as yours do not live here!</p>
   }

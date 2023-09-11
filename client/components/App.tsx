@@ -1,6 +1,5 @@
-// import AddTodo from './AddTodo.tsx'
+
 import { Outlet } from 'react-router-dom'
-import PlantList from './PlantList'
 import { Link } from 'react-router-dom'
 
 function App() {
