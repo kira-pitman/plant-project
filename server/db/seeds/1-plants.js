@@ -17,7 +17,7 @@ export async function seed(knex) {
       height: '140cm',
       location: 'Indoor',
       facts: 'Been flowering for two years',
-      image: '',
+      image: '../../../public/angelwingbegonia.jpg',
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export async function seed(knex) {
       height: '40cm',
       location: 'Indoor',
       facts: 'Flowered only once',
-      image: '',
+      image: '../../../public/peacelily.jpg',
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export async function seed(knex) {
       height: '120cm',
       location: 'Indoor',
       facts: 'Made two baby snake plants',
-      image: '',
+      image: '../../../public/snakeplant.jpg',
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export async function seed(knex) {
       height: '15cm',
       location: 'Indoor',
       facts: 'Has white variegation',
-      image: '',
+      image: '../../../public/pothos.jpg',
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ export async function seed(knex) {
       height: '30cm',
       location: 'Indoor',
       facts: 'More upright than expected',
-      image: '',
+      image: '../../../public/minimonstera.jpg',
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ export async function seed(knex) {
       height: '120cm',
       location: 'Indoor',
       facts: 'Long boi',
-      image: '',
+      image: '../../../public/stringofpearls.jpg',
     },
   ])
 }

@@ -22,15 +22,13 @@ export default function PlantInfo() {
   return (
     <>
       <div>
-        {/* want to return all plant info: name, height, location, fact, image */}
-        <h2>Plant name</h2>
-        <p>{plant?.name}</p>
+        <h2>{plant?.name}</h2>
         <img src={plant?.image} alt={`${plant.name}`}/>
-        <h2>Height</h2>
+        <h3>Height</h3>
         <p> {plant?.height}</p>
-        <h2>Location</h2>
+        <h3>Location</h3>
         <p> {plant?.location}</p>
-        <h2>Facts</h2>
+        <h3>Facts</h3>
         <p> {plant?.facts}</p>
       </div>
     </>

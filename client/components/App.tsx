@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <header className="header">
-      <Link to="/"><h1>It&apos;s ya bois</h1></Link>
+      <Link to="/" style={{ textDecoration: 'none' }}><h1>It&apos;s Ya Bois</h1></Link>
         <Outlet />
       </header>
       <section className="main"></section>

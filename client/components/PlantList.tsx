@@ -66,14 +66,14 @@ export default function PlantList() {
 
   return (
     <>
-      <h2>Ya bois</h2>
+      <h2>Ya Bois</h2>
       <div className='plantList'>
       <ul>
         {plantList.map((p: Plant, index: number) => {
           return (
             <li key={index}>
-              <Link to={`/${p.id}`}> {p.name}</Link>{' '}
-              <button onClick={(e) => handleDeleteClick(e, p.id)}>
+              <Link to={`/${p.id}`} style={{ textDecoration: 'none' }}> {p.name}</Link>{' '}
+              <button className="deleteButton" onClick={(e) => handleDeleteClick(e, p.id)}>
                 Delete
               </button>
             </li>
@@ -81,8 +81,9 @@ export default function PlantList() {
         })}
       </ul>
       </div>
-
+<h2>Add a Plant!</h2>
       <form onSubmit={handleAddClick} aria-label="Add Plant Form">
+        <p>Plant Name</p>
         <input
           type="text"
           name="name"
@@ -90,6 +91,7 @@ export default function PlantList() {
           value={formValues.name}
           onChange={handleChange}
         />
+        <p>Plant Height</p>
         <input
           type="text"
           name="height"
@@ -97,6 +99,7 @@ export default function PlantList() {
           value={formValues.height}
           onChange={handleChange}
         />
+        <p>Plant Location</p>
         <input
           type="text"
           name="location"
@@ -104,6 +107,7 @@ export default function PlantList() {
           value={formValues.location}
           onChange={handleChange}
         />
+        <p>Plant Facts</p>
         <input
           type="text"
           name="facts"
@@ -111,6 +115,7 @@ export default function PlantList() {
           value={formValues.facts}
           onChange={handleChange}
         />
+        <p>Plant Image Link</p>
         <input
           type="text"
           name="image"
@@ -118,6 +123,8 @@ export default function PlantList() {
           value={formValues.image}
           onChange={handleChange}
         />
+        <br/>
+        <br/>
         <button type="submit" aria-label="save">
           Add
         </button>
