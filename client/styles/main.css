@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Roboto&display=swap');
 
-body {
-  background-color: rgb(212, 196, 175);
-  margin-bottom: 10rem;
-}
-
-/* HOME PAGE */
-
 h1 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 80px;
 }
+
+body {
+  background-color: rgb(212, 196, 175);
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+}
+
+/* HOME PAGE */
 
 h2 {
   font-family: 'montserrat', sans-serif;
@@ -23,6 +27,12 @@ h3 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 50px;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 li {
@@ -51,9 +61,23 @@ a:visited {
   justify-content: center;
 }
 
+.plantList {
+  margin-right: 10rem;
+}
+
+.addForm{
+  margin-right: 3rem;
+}
+
 form {
   font-family: 'montserrat', sans-serif;
   text-align: center;
+  align-items: center;
+}
+
+button {
+  font-family: 'montserrat', sans-serif;
+  font-weight: 600;
 }
 
 /* INDIVIDUAL PLANT PAGE */
