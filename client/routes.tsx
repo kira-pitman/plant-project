@@ -6,11 +6,13 @@ import {
 import App from './components/App'
 import PlantList from './components/PlantList'
 import Plant from './components/Plant'
+import AddPlant from './components/AddPlant'
 
 export const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<PlantList />} />
     <Route path="/:id" element={<Plant/>}/>
+    <Route path="/add" element={<AddPlant/>}/>
   </Route>
 )
 

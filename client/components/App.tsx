@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <header className="header">
-      <Link to="/" style={{ textDecoration: 'none' }}><h1>It&apos;s Ya Bois</h1></Link>
+      <Link to="/" style={{ textDecoration: 'none' }}><h1>🪴Botanical Buds🪴</h1></Link>
         <Outlet />
       </header>
       <section className="main"></section>
