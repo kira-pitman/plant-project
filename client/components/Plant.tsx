@@ -25,7 +25,16 @@ export default function PlantInfo() {
   }
 
   if (isLoading) {
-    return <p>Still loading ya boi</p>
+    return (
+      <div className="loadingContainer">
+        <img
+          className="loading-icon"
+          alt="loading icon"
+          src="./loading-larger.png"
+        ></img>
+        <p className="loading">Plants growing!</p>{' '}
+      </div>
+    )
   }
 
   if (error) {
@@ -35,7 +44,7 @@ export default function PlantInfo() {
   return (
     <>
       <h3>{plant?.name}</h3>
-      <img src={plant?.image} alt={`${plant.name}`} />
+      <img src={plant?.image} alt={`${plant.name}`} className='homeImage' />
       <h3>Height:</h3>
       <p> {plant?.height}</p>
       <h3>Location:</h3>

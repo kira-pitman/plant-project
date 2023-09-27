@@ -22,7 +22,7 @@ export default function PlantList() {
           alt="loading icon"
           src="./loading-larger.png"
         ></img>
-        <p className="loading">Articles are loading</p>{' '}
+        <p className="loading">Plants are growing!</p>{' '}
       </div>
     )
   }
