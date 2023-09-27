@@ -15,7 +15,16 @@ export default function PlantList() {
   }
 
   if (!plantList || isLoading) {
-    return <p>Loading plants..</p>
+    return (
+      <div className="loadingContainer">
+        <img
+          className="loading-icon"
+          alt="loading icon"
+          src="./loading-larger.png"
+        ></img>
+        <p className="loading">Articles are loading</p>{' '}
+      </div>
+    )
   }
 
   return (
