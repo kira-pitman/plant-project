@@ -1,7 +1,7 @@
 import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query'
 import { fetchPlantById } from '../apis/apiClient'
 import { useParams } from 'react-router-dom'
-import { deletePlant } from '../apis/apiClient'
+import { deletePlant, editPlant } from '../apis/apiClient'
 
 export default function PlantInfo() {
   const id = Number(useParams().id)
@@ -19,9 +19,20 @@ export default function PlantInfo() {
     },
   })
 
+  const editPlantMutation = useMutation(editPlant, {
+    onSuccess: async () => {
+      queryClient.invalidateQueries(['plants'])
+    }
+  })
+
   const handleDeleteClick = (e: React.MouseEvent<HTMLElement>, id: number) => {
     e.preventDefault()
     deletePlantMutation.mutate({ id })
+  }
+
+  const handleEditClick = (e: React.MouseEvent<HTMLElement>, id: number) => {
+    e.preventDefault()
+    editPlantMutation.mutate({id})
   }
 
   if (isLoading) {
@@ -58,6 +69,8 @@ export default function PlantInfo() {
       >
         Delete
       </button>
+      <button className="editButton"
+      onClick={(e) => handleEditClick(e, plant.id)}
     </>
   )
 }

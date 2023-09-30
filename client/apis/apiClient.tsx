@@ -31,3 +31,7 @@ interface DeletePlant {
 export async function deletePlant({ id }: DeletePlant): Promise<void> {
   await request.delete(`/api/v1/plants/${id}`)
 }
+
+export async function editPlant ({id}: EditPlant): Promise<void> {
+  await request.edit(`/api/v1/plants/${id}`)
+}
