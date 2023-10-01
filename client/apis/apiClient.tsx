@@ -32,6 +32,15 @@ export async function deletePlant({ id }: DeletePlant): Promise<void> {
   await request.delete(`/api/v1/plants/${id}`)
 }
 
-export async function editPlant ({id}: EditPlant): Promise<void> {
-  await request.edit(`/api/v1/plants/${id}`)
+export async function editPlant({
+  id,
+  name,
+  height,
+  location,
+  facts,
+  image,
+}: Plant): Promise<void> {
+  await request
+    .post(`/api/v1/plants/${id}`)
+    .send({ name, height, location, facts, image })
 }
