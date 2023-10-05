@@ -22,7 +22,7 @@ export default function PlantInfo() {
   const editPlantMutation = useMutation(editPlant, {
     onSuccess: async () => {
       queryClient.invalidateQueries(['plants'])
-    }
+    },
   })
 
   const handleDeleteClick = (e: React.MouseEvent<HTMLElement>, id: number) => {
@@ -32,7 +32,7 @@ export default function PlantInfo() {
 
   const handleEditClick = (e: React.MouseEvent<HTMLElement>, id: number) => {
     e.preventDefault()
-    editPlantMutation.mutate({id})
+    editPlantMutation.mutate({ id })
   }
 
   if (isLoading) {
@@ -55,7 +55,7 @@ export default function PlantInfo() {
   return (
     <>
       <h3>{plant?.name}</h3>
-      <img src={plant?.image} alt={`${plant.name}`} className='homeImage' />
+      <img src={plant?.image} alt={`${plant.name}`} className="homeImage" />
       <h3>Height:</h3>
       <p> {plant?.height}</p>
       <h3>Location:</h3>
@@ -69,8 +69,10 @@ export default function PlantInfo() {
       >
         Delete
       </button>
-      <button className="editButton"
-      onClick={(e) => handleEditClick(e, plant.id)}
+      <button
+        className="editButton"
+        onClick={(e) => handleEditClick(e, plant.id)}
+      ></button>
     </>
   )
 }

@@ -1,5 +1,5 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { fetchAllPlants, deletePlant } from '../apis/apiClient'
+import { useQuery } from '@tanstack/react-query'
+import { fetchAllPlants } from '../apis/apiClient'
 import { Plant } from '../../models/plants'
 import { Link } from 'react-router-dom'
 
