@@ -16,3 +16,7 @@ export async function deletePlant(id: number) {
 export async function addPlant(plant: newPlant) {
   return db('plants').insert(plant).returning(['id', 'name', 'height', 'location', 'facts', 'image'])
 }
+
+export async function editPlant(id: number, name: string, height: string, location: string, facts: string, image: string){return db('plants').where({id}).update({name, height, location, facts, image}).returning(['id', 'name', 'height', 'location', 'facts', 'image'])
+
+}
