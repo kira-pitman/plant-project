@@ -72,7 +72,9 @@ export default function PlantInfo() {
       <button
         className="editButton"
         onClick={(e) => handleEditClick(e, plant.id)}
-      ></button>
+      >
+        Edit
+      </button>
     </>
   )
 }
