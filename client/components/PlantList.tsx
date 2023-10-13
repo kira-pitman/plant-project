@@ -41,7 +41,13 @@ export default function PlantList() {
                   </Link>{' '}
                   <br />
                   <br />
-                  <img className="homeImage" src={p?.image} alt={`${p.name}`} />
+                  <Link to={`/${p.id}`} style={{ textDecoration: 'none' }}>
+                    <img
+                      className="homeImage"
+                      src={p?.image}
+                      alt={`${p.name}`}
+                    />
+                  </Link>
                 </li>
               )
             })}

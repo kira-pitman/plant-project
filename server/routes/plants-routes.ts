@@ -34,4 +34,16 @@ router.delete('/:id', async (req, res) => {
   res.sendStatus(200)
 })
 
+// EDIT PLANT //
+router.patch('/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  const name = req.body.name
+  const height = req.body.height
+  const location = req.body.location
+  const facts = req.body.facts
+  const image = req.body.image
+  await db.editPlant(id, name, height, location, facts, image)
+  res.sendStatus(200)
+})
+
 export default router
