@@ -9,13 +9,12 @@ import Plant from './components/Plant'
 import AddPlant from './components/AddPlant'
 import EditPlant from './components/EditPlant'
 
-
 export const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<PlantList />} />
-    <Route path="/:id" element={<Plant/>}/>
-    <Route path="/add" element={<AddPlant/>}/>
-    <Route path="/edit" element={<EditPlant/>}/>
+    <Route path="/:id" element={<Plant />} />
+    <Route path="/add" element={<AddPlant />} />
+    <Route path="/:id/edit" element={<EditPlant />} />
   </Route>
 )
 

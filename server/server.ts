@@ -8,7 +8,7 @@ const server = express()
 server.use(express.json())
 server.use('/api/v1/plants', plantsRoute)
 server.use('/api/v1/plants/:id', plantsRoute)
-server.use('/api/v1/plants/edit', plantsRoute)
+server.use('/api/v1/plants/:id/edit', plantsRoute)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))
