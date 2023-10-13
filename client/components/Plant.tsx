@@ -59,7 +59,7 @@ export default function PlantInfo() {
       >
         Delete
       </button>
-      <Link to="/edit" className="toEdit">
+      <Link to={`/${id}/edit`} className="toEdit">
         <button className="editButton">Edit</button>
       </Link>
     </>
