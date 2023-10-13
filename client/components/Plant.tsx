@@ -1,16 +1,11 @@
 import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query'
 import { fetchPlantById } from '../apis/apiClient'
 import { useParams } from 'react-router-dom'
-import { deletePlant} from '../apis/apiClient'
+import { deletePlant } from '../apis/apiClient'
 import { Link } from 'react-router-dom'
 
 export default function PlantInfo() {
   const id = Number(useParams().id)
-  // const name = useParams().name
-  // const height = useParams().height
-  // const location = useParams().location
-  // const facts = useParams().facts
-  // const image = useParams().image
   const {
     data: plant,
     isLoading,
