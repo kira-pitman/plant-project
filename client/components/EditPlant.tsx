@@ -26,6 +26,7 @@ export default function Editing() {
   const editPlantMutation = useMutation(editPlant, {
     onSuccess: async () => {
       queryClient.invalidateQueries(['plants'])
+      console.log('beep boop')
     },
   })
 
@@ -58,43 +59,44 @@ export default function Editing() {
               onChange={handleChange}
             />
             <p>Plant Height</p>
-          <input
-            type="text"
-            name="height"
-            aria-label="height"
-            value={formValues.height}
-            onChange={handleChange}
-          />
-          <p>Plant Location</p>
-          <input
-            type="text"
-            name="location"
-            aria-label="location"
-            value={formValues.location}
-            onChange={handleChange}
-          />
-          <p>Plant Facts</p>
-          <input
-            type="text"
-            name="facts"
-            aria-label="facts"
-            value={formValues.facts}
-            onChange={handleChange}
-          />
-          <p>Plant Image Link</p>
-          <input
-            type="text"
-            name="image"
-            aria-label="image"
-            value={formValues.image}
-            onChange={handleChange}
-          />
-          <br />
-          <br />
-          <Link to="/">
-          <button type="submit" aria-label="save">
-            Update
-          </button></Link>
+            <input
+              type="text"
+              name="height"
+              aria-label="height"
+              value={formValues.height}
+              onChange={handleChange}
+            />
+            <p>Plant Location</p>
+            <input
+              type="text"
+              name="location"
+              aria-label="location"
+              value={formValues.location}
+              onChange={handleChange}
+            />
+            <p>Plant Facts</p>
+            <input
+              type="text"
+              name="facts"
+              aria-label="facts"
+              value={formValues.facts}
+              onChange={handleChange}
+            />
+            <p>Plant Image Link</p>
+            <input
+              type="text"
+              name="image"
+              aria-label="image"
+              value={formValues.image}
+              onChange={handleChange}
+            />
+            <br />
+            <br />
+            <Link to="/">
+              <button type="submit" aria-label="save">
+                Update
+              </button>
+            </Link>
           </form>
         </div>
       </div>

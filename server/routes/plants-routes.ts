@@ -44,6 +44,7 @@ router.patch('/:id', async (req, res) => {
   const image = req.body.image
   await db.editPlant(id, name, height, location, facts, image)
   res.sendStatus(200)
+  console.log('beep bop')
 })
 
 export default router
