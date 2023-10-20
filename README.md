@@ -14,6 +14,6 @@ Part of the requirements for my Dev Academy Aotearoa bootcamp. Needed to use rea
 
 # STRETCH
 - 80% testing coverage
-- edit plant
+- edit a plant
 - css update: colours, plant list centering, responsiveness
 - authentication
