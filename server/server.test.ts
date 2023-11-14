@@ -1,23 +1,50 @@
-import { test, expect } from 'vitest'
 import request from 'supertest'
-import { JSDOM } from 'jsdom'
-import { render } from './test-utils.js'
-import server from './server.ts'
 
-// DOM //
+import {
+  describe,
+  it,
+  expect,
+  test,
+  beforeAll,
+  beforeEach,
+  afterAll,
+  vi,
+} from 'vitest'
 
-test('A heading appears in the page', async () => {
-  const res = await request(server).get('/')
-  const screen = render(res)
-  const heading = screen.getByRole('header')
+import server from './server.js'
+import connection from './db/connection.ts'
 
-  expect(heading.textContent).toBe('Botanical Buds')
+vi.useFakeTimers()
+vi.setSystemTime(1692584552520)
+
+beforeAll(async () => {
+  await connection.migrate.latest()
 })
 
-test('Serves static assets with correct content-type', async () => {
-  const res = await request(server).get('/index.css')
-  expect(res.statusCode).toBe(200)
-  expect(res.headers['content-type']).toBe("text/css; charset=UTF-8")
+beforeEach(async () => {
+  await connection.seed.run()
+})
+
+afterAll(async () => {
+  await connection.destroy()
+})
+
+// DB //
+
+describe('GET /4 returns pothos page', () => {
+  it('displays all pothos data', async () => {
+    const res = await request(server).get('/api/v1/plants/4')
+    expect(res.body).toContain(/variegation/)
+  })
+})
+
+//  "facts": "Has white variegation",
+// "height": "15cm",
+// "location": "Indoor",
+
+it("responds with 404 if the post doesn't exist", async () => {
+  const res = await request(server).get('/api/v1/posts/127/comments')
+  expect(res.body).toEqual({})
 })
 
 // SERVER //
@@ -34,14 +61,3 @@ test('/wrong-url responds with a 404', async () => {
   const response = await request(server).get('/wrong-url')
   expect(response.statusCode).toBe(404)
 })
-
-// DOESN'T WORK :( //
-
-// test('/4 returns pothos', async () => {
-//   // ARRANGE
-//   // ACT
-//   const response = await request(server).get('/api/v1/plants/4')
-
-//   // ASSERT
-//   expect(response.statusCode).toBe(200)
-// })
