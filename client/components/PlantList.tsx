@@ -56,7 +56,7 @@ export default function PlantList() {
       </div>
       <>
         <Link to="/add" className="toAdd">
-          <h5>Add a new plant</h5>
+          <h4>Add a new plant</h4>
         </Link>
       </>
     </>

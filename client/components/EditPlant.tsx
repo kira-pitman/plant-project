@@ -44,13 +44,13 @@ export default function Editing() {
 
   return (
     <>
-      <h1>hello we r gonna edit</h1>
+      <h1>Prune your plant!</h1>
 
       <div className="editPage">
         <div className="editForm">
-          <h2>Edit {intialFormState.name}</h2>
+          <h4>*IN PROGRESS* {intialFormState.name}</h4>
           <form onSubmit={handleEditClick} aria-label="Edit Plant Form">
-            <p> Plant Name</p>
+            <p>Name</p>
             <input
               type="text"
               name="name"
@@ -58,7 +58,7 @@ export default function Editing() {
               value={formValues.name}
               onChange={handleChange}
             />
-            <p>Plant Height</p>
+            <p>Height</p>
             <input
               type="text"
               name="height"
@@ -66,7 +66,7 @@ export default function Editing() {
               value={formValues.height}
               onChange={handleChange}
             />
-            <p>Plant Location</p>
+            <p>Location</p>
             <input
               type="text"
               name="location"
@@ -74,7 +74,7 @@ export default function Editing() {
               value={formValues.location}
               onChange={handleChange}
             />
-            <p>Plant Facts</p>
+            <p>Facts</p>
             <input
               type="text"
               name="facts"
@@ -82,7 +82,7 @@ export default function Editing() {
               value={formValues.facts}
               onChange={handleChange}
             />
-            <p>Plant Image Link</p>
+            <p>Image Link</p>
             <input
               type="text"
               name="image"

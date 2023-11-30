@@ -46,11 +46,11 @@ export default function PlantInfo() {
     <>
       <h3>{plant?.name}</h3>
       <img src={plant?.image} alt={`${plant.name}`} className="homeImage" />
-      <h3>Height:</h3>
+      <h4>Height</h4>
       <p> {plant?.height}</p>
-      <h3>Location:</h3>
+      <h4>Location</h4>
       <p> {plant?.location}</p>
-      <h3>Facts:</h3>
+      <h4>Facts</h4>
       <p> {plant?.facts}</p>
       <br />
       <button
