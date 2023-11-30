@@ -1,4 +1,12 @@
-import { describe, it, expect, vi } from 'vitest'
+import {
+  describe,
+  it,
+  expect,
+  vi,
+  beforeAll,
+  beforeEach,
+  afterAll,
+} from 'vitest'
 import request from 'supertest'
 import { JSDOM } from 'jsdom'
 import server from './server.js'
@@ -31,7 +39,7 @@ describe('the home route', () => {
   })
 })
 
-describe('Search by name', () => {
+describe('Search by id', () => {
   it('calls our db.getPlantById', async () => {
     vi.mocked(db.getPlantById).mockImplementation(async () => {
       return [
@@ -50,6 +58,15 @@ describe('Search by name', () => {
     expect(res.statusCode).toBe(200)
     expect(db.getPlantById).toHaveBeenCalledWith(205)
     expect(res.text).toContain('beep boop')
+  })
+})
+
+describe('delete by Id', () => {
+  it('calls our db.deletePlant and responds w 200', async () => {
+    const res = await request(server).get('/api/v1/plants/1')
+    expect(res.statusCode).toBe(200)
+
+    request(res).del('/api/v1/plants/1').expect(200)
   })
 })
 
