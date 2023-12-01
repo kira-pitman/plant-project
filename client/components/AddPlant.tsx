@@ -37,7 +37,7 @@ const [formValues, setFormValues] = useState(intialFormState)
   return (
     <div className="addPage">
       <div className="addForm">
-        <h2>Add New Plant</h2>
+        <h4>Add New Plant</h4>
         <form onSubmit={handleAddClick} aria-label="Add Plant Form">
           <p>Plant Name</p>
           <input
