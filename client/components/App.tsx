@@ -11,7 +11,10 @@ function App() {
         <Outlet />
       </header>
       <section className="main"></section>
-      <footer className="footer"></footer>
+      <footer>
+        {' '}
+        <p className="copyright">Copyright 2023 Kira Pitman</p>
+      </footer>
     </>
   )
 }
