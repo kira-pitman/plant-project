@@ -146,6 +146,14 @@ form {
   align-items: center;
 }
 
+input {
+  background-color: #8b5f3c;
+  border-color: #8b5f3c;
+  border-style: solid;
+  color: #c6a582;
+  outline: none;
+}
+
 /* LOADING ICON */
 
 .loading-icon {
