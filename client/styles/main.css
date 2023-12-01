@@ -87,11 +87,13 @@ li {
 a:link {
   color: #c6a582;
   text-decoration: none;
+  align-self: center;
 }
 
 a:visited {
   color: #ba8e69;
   text-decoration: none;
+  align-self: center;
 }
 
 .plantList {
@@ -114,21 +116,16 @@ a:visited {
 .nameImage {
   display: flex;
   flex-direction: column;
-  align-self: left;
-  padding-right: 20vw;
+  padding-right: 15vw;
 }
 
 .plantInfo {
   display: flex;
   flex-direction: column;
   align-self: right;
+  padding-top: 3rem;
 }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
 
 p {
   font-family: 'montserrat', sans-serif;
@@ -139,8 +136,8 @@ p {
 }
 
 .individualImage {
-  width: 400px;
-  height: 400px;
+  width: 30vw;
+  height: 30vw;
   border: solid;
   border-radius: 50%;
   border-color: #9d6c44;
@@ -154,17 +151,20 @@ button {
   font-family: 'montserrat', sans-serif;
   font-weight: bolder;
   color: #433937;
-  letter-spacing: 0.1em;
+  width: 5rem;
+  height: 2rem;
 
-  padding: 1%;
+  align-self: center;
+
+  margin-top:5vw;
 
   cursor: pointer;
-
   background-color: #9d6c44;
   border-color: #8b5f3c;
-  border-radius: 10%;
-  border-style: solid;
+  border-radius: 1rem;
+  border-style: solid; 
 }
+
 
 /* ADD PAGE */
 
@@ -189,7 +189,7 @@ input {
   font-weight: 300;
   font-size: 0.75em;
   color: #dbccb5;
-  margin-top: 20vh;
+  margin-top: 20vw;
   margin-bottom: 0px;
 }
 
