@@ -68,6 +68,7 @@ describe('delete by Id', () => {
 
     request(res).del('/api/v1/plants/1').expect(200)
   })
+  // change to allow for branch to merge
 })
 
 // it('handles errors', async () => {
