@@ -44,31 +44,35 @@ export default function PlantInfo() {
 
   return (
     <>
-    <div className='PlantPage'>
-    <div className='nameImage'>
-      <h2>{plant?.name}</h2>
-      <img src={plant?.image} alt={`${plant.name}`} className="individualImage" />
-      </div>
-      <div className='plantInfo'>
-      <h4>Height</h4>
-      <p> {plant?.height}</p>
-      <h4>Location</h4>
-      <p> {plant?.location}</p>
-      <h4>Facts</h4>
-      <p> {plant?.facts}</p>
-      </div>
-      </div>
-      <div className='buttons'>
+      <div className="PlantPage">
+        <div className="nameImage">
+          <h2>{plant?.name}</h2>
+          <img
+            src={plant?.image}
+            alt={`${plant.name}`}
+            className="individualImage"
+          />
+           <br />
+      <Link to={`/${id}/edit`} className="toEdit">
+        <button className="editButton">Edit</button>
+      </Link>
       <button
         className="deleteButton"
         onClick={(e) => handleDeleteClick(e, plant.id)}
       >
         Delete
       </button>
-      <Link to={`/${id}/edit`} className="toEdit">
-        <button className="editButton">Edit</button>
-      </Link>
+        </div>
+        <div className="plantInfo">
+          <h4>Height</h4>
+          <p> {plant?.height}</p>
+          <h4>Location</h4>
+          <p> {plant?.location}</p>
+          <h4>Facts</h4>
+          <p> {plant?.facts}</p>
+        </div>
       </div>
+     
     </>
   )
 }
