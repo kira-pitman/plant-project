@@ -5,11 +5,12 @@ import Nav from './Nav'
 function App() {
   return (
     <>
+      <Nav />
       <header className="header">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <h1>Botanical Buds</h1>
         </Link>
-        <Nav/>
+
         <Outlet />
       </header>
       <section className="main"></section>
