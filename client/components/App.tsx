@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import Nav from './Nav'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Link to="/" style={{ textDecoration: 'none' }}>
           <h1>Botanical Buds</h1>
         </Link>
+        <Nav/>
         <Outlet />
       </header>
       <section className="main"></section>
