@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import Nav from './Nav'
 
 function App() {
   return (
     <>
+      <Nav />
       <header className="header">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <h1>Botanical Buds</h1>
         </Link>
+
         <Outlet />
       </header>
       <section className="main"></section>
