@@ -13,5 +13,6 @@ export interface Plant extends newPlant {
 }
 
 export interface DeletePlant {
+  id: Plant['id']
   token: string
 }
