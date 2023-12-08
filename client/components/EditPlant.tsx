@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { editPlant } from '../apis/apiClient'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react'
 
 // PSEUDOCODE //
 // want to show a form
@@ -37,9 +38,10 @@ export default function Editing() {
     })
   }
 
-  const handleEditClick = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleEditClick = async (e: React.FormEvent<HTMLFormElement>) => {
+    const token = await getAccessTokenSilently();
     e.preventDefault()
-    editPlantMutation.mutate(formValues)
+    editPlantMutation.mutate(formValues, token)
   }
 
   return (

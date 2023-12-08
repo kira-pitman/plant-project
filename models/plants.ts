@@ -4,6 +4,7 @@ export interface newPlant {
   location: string
   facts: string
   image: string
+  token: string
 }
 
 export interface Plant extends newPlant {
@@ -12,5 +13,5 @@ export interface Plant extends newPlant {
 }
 
 export interface DeletePlant {
-token: string
+  token: string
 }

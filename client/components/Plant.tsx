@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
 export default function PlantInfo() {
-  const { getAccessTokenSilently } = useAuth0();
+  const { getAccessTokenSilently } = useAuth0()
   const id = Number(useParams().id)
   const {
     data: plant,
@@ -22,8 +22,11 @@ export default function PlantInfo() {
     },
   })
 
-  const handleDeleteClick =  async(e: React.MouseEvent<HTMLElement>, id: number) => {
-    const token = await getAccessTokenSilently();
+  const handleDeleteClick = async (
+    e: React.MouseEvent<HTMLElement>,
+    id: number
+  ) => {
+    const token = await getAccessTokenSilently()
     e.preventDefault()
     deletePlantMutation.mutate({ id, token: token })
   }
@@ -55,16 +58,16 @@ export default function PlantInfo() {
             alt={`${plant.name}`}
             className="individualImage"
           />
-           <br />
-      <Link to={`/${id}/edit`} className="toEdit">
-        <button className="editButton">Edit</button>
-      </Link>
-      <button
-        className="deleteButton"
-        onClick={(e) => handleDeleteClick(e, plant.id)}
-      >
-        Delete
-      </button>
+          <br />
+          <Link to={`/${id}/edit`} className="toEdit">
+            <button className="editButton">Edit</button>
+          </Link>
+          <button
+            className="deleteButton"
+            onClick={(e) => handleDeleteClick(e, plant.id)}
+          >
+            Delete
+          </button>
         </div>
         <div className="plantInfo">
           <h4>Height</h4>
@@ -75,7 +78,6 @@ export default function PlantInfo() {
           <p> {plant?.facts}</p>
         </div>
       </div>
-     
     </>
   )
 }
