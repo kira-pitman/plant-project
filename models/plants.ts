@@ -8,4 +8,9 @@ export interface newPlant {
 
 export interface Plant extends newPlant {
   id: number
+  token: string
+}
+
+export interface DeletePlant {
+token: string
 }
