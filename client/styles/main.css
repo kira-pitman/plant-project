@@ -2,14 +2,15 @@
 
 h1 {
   font-family: 'montserrat', sans-serif;
-  text-align: center;
+  text-align: left;
   font-size: 5vw;
   color: #c6a582;
 
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-wrap: nowrap;
+  padding-left: 8vh;
 }
 
 body {
