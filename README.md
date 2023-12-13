@@ -13,7 +13,7 @@ Part of the requirements for my Dev Academy Aotearoa bootcamp. Needed to use rea
 [x] fully accessible with WAVE checker 
 
 # STRETCH
-- 80% testing coverage
-- edit a plant
-- css update: colours, plant list centering, responsiveness
-- authentication
+[ ] 80% testing coverage of server side
+[ ] edit a plant
+[x] css update: colours, plant list centering, responsiveness
+[ ]authentication
