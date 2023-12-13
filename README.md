@@ -17,3 +17,13 @@ Part of the requirements for my Dev Academy Aotearoa bootcamp. Needed to use rea
 [ ] edit a plant
 [x] css update: colours, plant list centering, responsiveness
 [ ]authentication
+
+# TECH USED
+- React (Vite)
+- Node.js
+- Express
+- Typescript
+- Css
+- Vitest
+- Auth0
+- SuperAgent
