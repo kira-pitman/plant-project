@@ -7,16 +7,16 @@ Full stack application to keep track of my plants at home! Includes information 
 Part of the requirements for my Dev Academy Aotearoa bootcamp. Needed to use react and typescript and be deployed. It has now expanded into a personal project to develop and maintain my full-stack CRUD website development knowledge I learnt in my bootcamp - CRUD and RESTful websites as well as authentication, testing, and user experience.
 
 # MVP
-[x] shows list of plants 
-[x] add a plant
-[x] delete a plant
-[x] fully accessible with WAVE checker 
+- [x] shows list of plants 
+- [x] add a plant
+- [x] delete a plant
+- [x] fully accessible with WAVE checker 
 
 # STRETCH
-[ ] 80% testing coverage of server side
-[ ] edit a plant
-[x] css update: colours, plant list centering, responsiveness
-[ ]authentication
+- [ ] 80% testing coverage of server side
+- [ ] edit a plant
+- [x] css update: colours, plant list centering, responsiveness
+- [ ]authentication
 
 # TECH USED
 - React (Vite)
