@@ -16,7 +16,7 @@ Part of the requirements for my Dev Academy Aotearoa bootcamp. Needed to use rea
 - [ ] 80% testing coverage of server side
 - [ ] edit a plant
 - [x] css update: colours, plant list centering, responsiveness
-- [ ]authentication
+- [ ] authentication
 
 # TECH USED
 - React (Vite)
