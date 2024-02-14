@@ -4,7 +4,7 @@ h1 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 5vw;
-  color: #c6a582;
+  color: #fcd5ac;
 
   display: flex;
   justify-content: center;
@@ -23,21 +23,21 @@ h2 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 3vw;
-  color: #8b9475;
+  color: #c2d8ad;
 }
 
 h3 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 2.5vw;
-  color: #8b9475;
+  color: #c2d8ad;
 }
 
 h4 {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-size: 2.5vw;
-  color: #c6a582;
+  color: #fcd5ac;
 }
 
 .homepage {
@@ -85,13 +85,13 @@ li {
 }
 
 a:link {
-  color: #c6a582;
+  color: #fcd5ac;
   text-decoration: none;
   align-self: center;
 }
 
 a:visited {
-  color: #ba8e69;
+  color: #fcd5ac;
   text-decoration: none;
   align-self: center;
 }
@@ -126,13 +126,12 @@ a:visited {
   padding-top: 3rem;
 }
 
-
 p {
   font-family: 'montserrat', sans-serif;
   text-align: center;
   font-weight: bold;
   font-size: 2.1vw;
-  color: #8b9475;
+  color: #adb891;
 }
 
 .individualImage {
@@ -150,21 +149,20 @@ p {
 button {
   font-family: 'montserrat', sans-serif;
   font-weight: bolder;
-  color: #433937;
+  color: #50312f;
   width: 5rem;
   height: 2rem;
 
   align-self: center;
 
-  margin-top:5vw;
+  margin-top: 5vw;
 
   cursor: pointer;
-  background-color: #9d6c44;
-  border-color: #8b5f3c;
+  background-color: #fcd5ac;
+  border-color: #fcd5ac;
   border-radius: 1rem;
-  border-style: solid; 
+  border-style: solid;
 }
-
 
 /* ADD PAGE */
 
@@ -175,10 +173,10 @@ form {
 }
 
 input {
-  background-color: #8b5f3c;
-  border-color: #8b5f3c;
+  background-color: #fcd5ac;
+  border-color: #fcd5ac;
   border-style: solid;
-  color: #c6a582;
+  color: #50312f;
   outline: none;
 }
 
