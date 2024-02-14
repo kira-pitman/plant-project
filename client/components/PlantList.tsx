@@ -38,14 +38,14 @@ export default function PlantList() {
                   <Link to={`/${p.id}`} style={{ textDecoration: 'none' }}>
                     {' '}
                     {p.name}
-                  </Link>{' '}
+                  {/* </Link>{' '} */}
                   <br />
                   <br />
-                  <Link to={`/${p.id}`} style={{ textDecoration: 'none' }}>
+                  {/* <Link to={`/${p.id}`} style={{ textDecoration: 'none' }}> */}
                     <img
                       className="homeImage"
                       src={p?.image}
-                      alt={`${p.name}`}
+                      alt={`a close up of ${p.name} showing identifiable features`}
                     />
                   </Link>
                 </li>
